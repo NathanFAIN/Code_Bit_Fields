@@ -12,7 +12,6 @@
 #define BIT_FIELDS_H_
 
 typedef union bit_fields_s bit_fields_t;
-
 union bit_fields_s
 {
     unsigned char value;
@@ -28,5 +27,21 @@ union bit_fields_s
         unsigned char bit8 : 1;
     } byte;
 };
+
+/*
+value :
++-+-+-+-+-+-+-+-+
+| | | | | | | | |
++-+-+-+-+-+-+-+-+
+ ^ ^ ^ ^ ^ ^ ^ ^
+ | | | | | | | +--------- bit8
+ | | | | | | +----------- bit7
+ | | | | | +------------- bit6
+ | | | | +--------------- bit5
+ | | | +----------------- bit4
+ | | +------------------- bit3
+ | +--------------------- bit2
+ +----------------------- bit1
+*/ 
 
 #endif /* !BIT_FIELDS_H_ */

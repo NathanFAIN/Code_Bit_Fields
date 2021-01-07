@@ -22,6 +22,6 @@ void print_bit(unsigned char value)
 
 int main(void)
 {
-    print_bit(255);
+    print_bit(42);
     return (0);
 }
